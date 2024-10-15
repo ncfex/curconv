@@ -10,7 +10,7 @@ insert_final_newline = false
 max_line_length = 80
 trim_trailing_whitespace = true
 
-[*.{json,py,rs}]
+[*.{json,py,rs,go}]
 charset = utf-8
 end_of_line = lf
 indent_style = space
