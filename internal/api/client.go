@@ -61,7 +61,7 @@ func (c *Client) GetExchangeRates(baseCurrency string) (*ExchangeRates, error) {
 	}
 
 	filename := fmt.Sprintf(storePath+"/%v_%s.json", strings.ReplaceAll(rates.Date, ":", "-"), baseCurrency)
-	err = os.WriteFile(filename, jsonData, 0644)
+	err = os.WriteFile(filename, jsonData, 0600)
 	if err != nil {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
